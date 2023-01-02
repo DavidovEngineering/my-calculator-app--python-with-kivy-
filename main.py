@@ -113,7 +113,7 @@ class RootWidget(ScreenManager):
 
 class MyCalculator(App):
     def build(self):
-        self.icon = r'Setting-Out-Calc-Cogo-Icon5.png'    # change this to the actual icon
+        # self.icon = r'icon.png'    # change this to the actual icon
         return RootWidget()
     
 

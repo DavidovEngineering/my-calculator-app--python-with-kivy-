@@ -1,7 +1,7 @@
 #:kivy 2.1
 <PageGridLayout@GridLayout>
-    background_color: (40/255,40/255,40/255,1)
-    padding: 5,5
+    background_color: (180/255,180/255,180/255,1)
+    padding: 10,10
     spacing: 2,2
     canvas.before:
         Color:
@@ -36,7 +36,6 @@
     valign: "top"
     halign: "left"
 
-
 <Button>
     font_size: (root.height * 0.45)
 
@@ -46,14 +45,10 @@
 <MainScreen>:
     PageGridLayout:
         cols: 1
-        padding: 10,10
         GridLayout:
             cols: 1
             padding: 5, 10
             size_hint_y: 0.2
-            Label:
-                id: spacer
-                size_hint_y: 0.15
             DisplayAreaLayout:
                 cols: 1
                 DisplayTopLabel:
@@ -65,10 +60,10 @@
                     text: "0"
             Label:
                 id: spacer
-                size_hint_y: 0.1
+                size_hint_y: 0.2
         GridLayout:
             cols: 1
-            padding: 10, 10
+            spacing: 2,2
             size_hint_y: 0.7
             GridLayout:
                 cols: 2
@@ -81,9 +76,6 @@
                     text: "Del"
                     size_hint_x: 0.3
                     on_release: root.backspace()
-            Label:
-                id: spacer
-                size_hint_y: 0.05
             GridLayout:
                 cols: 4
                 size_hint_y: 0.5
@@ -128,7 +120,6 @@
                 cols: 3
                 size_hint_y: 0.16666
                 spacing: 2,0
-                padding: 0,2
                 Button:
                     text:"0"
                     on_release: root.add_to_numstring("0")
