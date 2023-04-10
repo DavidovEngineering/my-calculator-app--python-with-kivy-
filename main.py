@@ -1,5 +1,3 @@
-# TO DO - multiply by zero
-
 from kivy.app import App
 from kivy.core.window import Window
 from kivy.lang import Builder
@@ -23,9 +21,6 @@ class SpecialFunctions:
                 trunc_answer = trunc_answer[0:7]
                 trunc_answer = trunc_answer + "e+" + str(chars_in_lhs - 7)
             else:
-                # if int(answer) == 0:
-                #     print("it is zero")
-                # else:
                 trunc_answer = str(round(answer,(max_char - chars_in_lhs)))
         else:
             trunc_answer = answer
@@ -111,14 +106,14 @@ class RootWidget(ScreenManager):
     pass
 
 
-class MyCalculator(App):
+class WeeCalculator(App):
     def build(self):
-        # self.icon = r'icon.png'    # change this to the actual icon
+        self.icon = r'icon2.png'    # change this to the actual icon
         return RootWidget()
     
 
 if __name__ == "__main__":
-    Window.size = ((720*0.5), (1280*0.5))
-    # Window.fullscreen = True
-    MyCalculator().run()
+    # Window.size = ((720*0.5), (1280*0.5)) # used for on PC
+    Window.fullscreen = True # used for on mobile
+    WeeCalculator().run()
 # End
